@@ -5,6 +5,8 @@ on:
       - main
 jobs:
   generate-data:
+    runs-on: ubuntu-latest
+    
     steps:
       - name: Generate data 📇
         uses: Platane/snk@master
