@@ -4,6 +4,19 @@ on:
     branches:
       - main
 jobs:
+  generate-data:
+    steps:
+      - name: Generate data 📇
+        uses: Platane/snk@master
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          gif_out_path: public/github-contribution-grid-snake.gif
+
+      - name: Commit data 🎉
+        uses: EndBug/add-and-commit@v7
+        with:
+          default_author: github_actions
+
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
