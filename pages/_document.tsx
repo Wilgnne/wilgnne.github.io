@@ -12,7 +12,7 @@ class MyDocument extends Document {
       <Html style={{ height: "100%" }}>
         <Head>
           <meta name="description" content="Wilgnne K." />
-          <link rel="icon" href={'/favicon.ico'} />
+          <link rel="icon" href={'/favicon.ico?'} />
         </Head>
         <body 
           style={{ 
