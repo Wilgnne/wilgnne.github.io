@@ -30,13 +30,13 @@ jobs:
 
       - name: Install and Build 🔧
         uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
       - run: yarn install
       - run: yarn export
       - run: touch out/.nojekyll
         env:
             CI: true
-        with:
-          node-version: ${{ matrix.node }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
